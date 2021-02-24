@@ -11,7 +11,7 @@
 
 ## General info
 
-This project is a simple API website hosted on Google App Engine.The main purpose of the app is to show my project with post written in Markdown.
+This project is a simple API website hosted on Google App Engine. The main purpose of the app is to show my project with post written in Markdown.
 
 ## Technologies
 Project is created with:
@@ -21,10 +21,8 @@ Project is created with:
 
 ## Setup
 
-To run this project you need to execute those commands:
+To run this project you need to execute this command:
 ```
-export FLASK_APP=aquastan.py
-
 flask run
 ```
 

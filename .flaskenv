@@ -1,1 +1,1 @@
-FLASK_APP=aquastan.py
+FLASK_APP=main.py

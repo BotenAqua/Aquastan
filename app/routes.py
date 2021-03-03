@@ -1,6 +1,8 @@
 from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm
+import os
+import markdown
 
 
 @app.route('/')
@@ -26,3 +28,10 @@ def login():
 		flash('{} chce sie zalogowac i {} byc zapamietany'.format(form.username.data, form.remember_me.data))
 		return redirect(url_for('index'))
 	return render_template('login.html', title='Zaloguj sie', form=form)
+
+@app.route('/md')
+def markdown_posts():
+	file_dir = os.path.dirname(os.path.realpath(__file__)) + url_for('static', filename='posts/test.md')
+	with open(file_dir) as file_reader:
+		md_post = file_reader.read()
+	return(markdown.markdown(md_post, extensions=['meta']))

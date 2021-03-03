@@ -1,0 +1,55 @@
+:root{
+  --light: #EBEEFF;
+  --dark: #000314;
+  --blu: #4766FF;
+}
+
+body{
+  background: var(--light);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  position: sticky;
+  top: 0;
+}
+
+header ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--dark);
+}
+
+header li{
+  float: left;
+}
+
+header a{
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--light);
+  border-right: 1px solid var(--light)
+}
+
+header a:hover{
+  background-color: var(--light);
+  color: var(--blu)
+}
+
+h2, .highlight{
+  color: var(--blu)
+}
+
+.rev{
+  background: var(--dark);
+  color: var(--light)
+}
+
+.rev .highlight{
+  color: var(--blu);
+}

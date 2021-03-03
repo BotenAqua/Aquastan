@@ -5,13 +5,16 @@
 		{% else %}
 			<title>Aquastan!</title>
 		{% endif %}
+		<link rel='stylesheet' href='{{ url_for('static', filename='css/style.css') }}'>
 	</head>
 	<body>
-		<div>Navbar</div>
-		<div>
-			<a href="{{ url_for('index') }}">Glowna</a>
-			<a href="{{ url_for('login') }}">Zaloguj sie</a>
-		</div>
+		<header>
+			<ul>
+				<!--moze jakis for w przyszlosci? -->
+				<li><a href="{{ url_for('index') }}">Glowna</a></li>
+				<li><a href="{{ url_for('login') }}">Zaloguj sie</a></li>
+		</ul>
+		</header>
 		<hr>
 		{% with messages = get_flashed_messages() %}
 		{% if messages %}
@@ -24,6 +27,6 @@
 		{% endwith %}
 		{% block content %}{% endblock %}
 		<hr>
-		<div>stopki? :-3</div>
+		<footer>stopki? :-3</footer>
 	</body>
 </html>

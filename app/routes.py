@@ -31,7 +31,11 @@ def login():
 
 @app.route('/md')
 def markdown_posts():
+	# To do: cleanup & DRY
+	# fix content
 	file_dir = os.path.dirname(os.path.realpath(__file__)) + url_for('static', filename='posts/test.md')
 	with open(file_dir) as file_reader:
 		md_post = file_reader.read()
-	return(markdown.markdown(md_post, extensions=['meta']))
+	md = markdown.Markdown(extensions=['meta'])
+	content = md.convert(md_post)
+	return render_template('markdown_post.html', meta = md.Meta, post = content)

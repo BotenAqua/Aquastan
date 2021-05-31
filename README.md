@@ -39,7 +39,7 @@ No features yet... :-(
 
 ## Status
 
-The project is currently in development.
+The project is currently ~~in development.~~ abandoned. Will be resumed in Flask 2.0 soon.
 
 ## Inspiration
 
